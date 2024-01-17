@@ -1,0 +1,47 @@
+body {
+  background-color:black;
+  color: purple;
+  font-family: tutuca;
+  font-size: 40px;
+  }
+#animatedText{
+    margin-top:auto;
+}
+.hearts-container {
+  position: relative;
+  height: 100vh; /* Tornar a área de visualização da página a altura total */
+}
+
+.heart {
+  position: absolute;
+  width: 5px; /* Ajuste o tamanho conforme necessário */
+  height: 5px; /* Ajuste o tamanho conforme necessário */
+  background-color: #ff3366; /* Cor dos corações */
+  clip-path: polygon(
+    50% 0%, 100% 0%, 100% 56%, 50% 100%, 0% 56%, 0% 0%
+  ); /* Formato de coração */
+  transform: rotate(-45deg);
+  animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(-45deg);
+  }
+}
+
+@font-face  {
+    font-family: 'tutuca';
+    src: url('fonts/Love & Trust (Hearted).ttf');
+}
+
+img{
+    height: 350px;
+    margin-left: 100px;
+    border: 3px solid blueviolet;
+    box-shadow: 3px 3px 3px white;
+}
+

@@ -1,0 +1,42 @@
+const animatedText = document.getElementById('animatedText');
+  const text = `Oiii, tudo bem?...Quero que você compreenda o quão excepcional é. Sua presença na minha vida é como uma sinfonia celestial, uma melodia que ressoa nos recantos mais profundos do meu coração. Cada traço da sua essência ilumina não apenas os meus dias, mas a própria essência da existência. Você é a luz que transforma o comum em extraordinário, e agradeço por cada momento que compartilhamos.
+  Desejo ser mais do que alguém que faz parte da sua vida; desejo ser a inspiração que impulsiona seus sonhos, o apoio que fortalece suas aspirações. Seus sorrisos são como raios de sol, dispersando nuvens de preocupação, e a busca pela sua felicidade tornou-se o propósito que norteia meus dias.
+  Não tenho a pretensão de oferecer o universo, mas quero ser o planeta ao redor do qual gravita a sua alegria, o farol que guia nas noites escuras. Em cada palavra que compartilhamos, vislumbro a construção de um mundo particular, onde cada detalhe é moldado pela beleza da nossa conexão.
+  Minha gata, em você encontro uma fonte inesgotável de inspiração. Cada traço do seu ser é como uma obra de arte única, e a cada olhar, descubro novas camadas da sua complexidade fascinante. Suas qualidades são como estrelas no céu noturno, formando constelações que contam a história cativante da sua singularidade.
+  À medida que navegamos pela jornada da vida, quero ser o ancoradouro seguro nas tempestades, o abraço caloroso nos dias frios. Cada desafio que enfrentarmos será uma oportunidade de fortalecer ainda mais os laços que compartilhamos, transformando-os em uma tapeçaria de experiências memoráveis.
+  É difícil expressar completamente o quanto você significa para mim, pois suas virtudes transcendem as palavras. Você é a epítome da beleza, não apenas esteticamente, mas na maneira como ilumina o mundo ao seu redor com compaixão, gentileza e sabedoria.
+  A jornada ao seu lado é uma aventura extraordinária, cheia de surpresas e descobertas. Cada capítulo é uma página do livro da nossa história, e mal posso esperar para ver como o enredo se desdobrará, repleto de momentos emocionantes e crescimento mútuo.
+  Quero que saiba que sua presença é como um farol constante na escuridão, guiando-me nos momentos de incerteza. Juntos, formamos uma equipe invencível, capaz de enfrentar os desafios mais difíceis e celebrar as vitórias mais significativas.
+  Você é minha musa, a inspiração por trás de muitas palavras escritas e sentimentos profundos. Cada interação é uma oportunidade de aprender mais sobre você e aprofundar nossa ligação. Nosso relacionamento é um tesouro que valorizo, e prometo cuidar dele com respeito, amor e dedicação.
+  Minha gata, você é a poesia que dá sentido às palavras, a canção que embala o meu coração. Cada instante contigo é uma sinfonia de emoções, uma celebração da beleza que permeia a nossa existência compartilhada. Estou profundamente grato por ter você ao meu lado nesta jornada chamada vida.`;
+
+  let index = 0;
+
+  function typeWriter() {
+    animatedText.textContent += text[index];
+    index++;
+
+    if (index < text.length) {
+      setTimeout(typeWriter, 50); // Ajuste o intervalo de tempo conforme desejado
+    }
+  }
+
+  typeWriter();
+  
+ 
+  
+  
+  
+  
+  function createHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.style.left = `${Math.random() * 100}vw`; // Posição horizontal aleatória
+  document.querySelector('.hearts-container').appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000); // Remover coração após 5 segundos
+}
+
+setInterval(createHeart, 500); // Criar um coração a cada 0.5 segundos
