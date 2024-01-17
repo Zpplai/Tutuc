@@ -44,4 +44,12 @@ img{
     border: 3px solid blueviolet;
     box-shadow: 3px 3px 3px white;
 }
+audio{
+    height: 30px;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+
 
